@@ -199,7 +199,7 @@ function nextSong(){if(!songList.length)return;loadSong(songIndex+1);tryPlay()}
 audio.addEventListener("ended",nextSong);
 if(photosInput){photosInput.addEventListener("change",()=>{handleFiles(Array.from(photosInput.files||[]))});}
 startBtn.addEventListener("click",startExperience);
-function unlockGate(){const v=(gateInput.value||"").trim();if(v==="Brempomaa"){gateError.style.display="none";gateOverlay.style.display="none";startExperience()}else{gateError.style.display="block";gateInput.value="";gateInput.focus()}}
+function unlockGate(){const v=(gateInput.value||"").trim();if(v==="EA"){gateError.style.display="none";gateOverlay.style.display="none";startExperience()}else{gateError.style.display="block";gateInput.value="";gateInput.focus()}}
 gateBtn.addEventListener("click",unlockGate);
 gateInput.addEventListener("keydown",e=>{if(e.key==="Enter")unlockGate()});
 window.addEventListener("load",()=>{gateInput.focus()});
@@ -218,3 +218,4 @@ window.addEventListener('dragleave',e=>{if(hasFiles(e)){dragDepth=Math.max(0,dra
 );
 window.addEventListener('drop',e=>{if(hasFiles(e)){e.preventDefault();dragDepth=0;dropOverlay.classList.remove('active');const files=Array.from(e.dataTransfer.files||[]);handleFiles(files);}}
 );
+
