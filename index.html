@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Why Egbert Loves Anastasia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="slideshow" id="slideshow"></div>
+<div id="hearts"></div>
+<div id="dropOverlay" class="drop-overlay" aria-hidden="true">
+  <div class="box">Drop photos or videos to add</div>
+</div>
+<main class="shell">
+  <header class="top">
+    <h1>Why Egbert Loves Anastasia</h1>
+    <p class="subtitle">For you, with all my heart</p>
+  </header>
+
+  <section class="card">
+    <p id="reasonText"></p>
+    <div class="reason-nav">
+      <button id="prevBtn" class="btn ghost" aria-label="Previous">‹</button>
+      <div id="counter" class="counter"></div>
+      <button id="nextBtn" class="btn ghost" aria-label="Next">›</button>
+      <label class="autoplay">
+        <input type="checkbox" id="autoToggle" checked>
+        <span>Auto-play</span>
+      </label>
+    </div>
+  </section>
+
+  <section class="controls">
+    <button id="playPause" class="btn primary">Play</button>
+    <div class="volume">
+      <span>Volume</span>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.7">
+    </div>
+    <button id="fsToggle" class="btn ghost">Fullscreen</button>
+  </section>
+</main>
+
+<div id="gateOverlay" class="start gate">
+  <div class="start-inner">
+    <h2>Enter Password</h2>
+    <input type="password" id="gateInput" class="text-input" placeholder="Password" autocomplete="current-password">
+    <button id="gateBtn" class="btn primary big">Enter</button>
+    <p id="gateError" class="error" aria-live="polite" style="display:none">Incorrect password</p>
+  </div>
+</div>
+
+<div id="startOverlay" class="start">
+  <div class="start-inner">
+    <div class="big-heart">❤️</div>
+    <h2>Tap to begin</h2>
+    <button id="startBtn" class="btn primary big">Begin</button>
+  </div>
+</div>
+
+<audio id="audio" preload="auto" crossorigin="anonymous"></audio>
+<script src="script.js"></script>
+</body>
+</html>
